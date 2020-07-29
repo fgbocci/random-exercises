@@ -1,19 +1,3 @@
-"""
-Realizar un programa que permita cargar los resultados de un torneo de fútbol. El usuario deberá ingresar la cantidad de equipos participantes y luego los nombres de dichos equipos.
-Una vez hecho esto, el programa deberá presentar un menú con tres opciones:
-1 – INGRESAR RESULTADOS
-2- MOSTRAR POSICIONES
-3- SALIR DEL PROGRAMA
-
-	Al elegir la opción 1, el usuario ingresa los nombres de dos equipos y los goles convertidos por cada uno. El programa deberá calcular los puntos de cada equipo (3 si ganó el partido, 1 si empató y 0 si perdió) y acumular los goles a favor y en contra de cada equipo.
-
-	Al elegir la opción 2, el programa deberá ordenar la lista de equipos por cantidad de puntos. Si hay igualdad de puntos, por diferencia de gol (Goles a favor – goles en contra). Una vez ordenada, el programa mostrará la tabla de posiciones, con las columnas Equipo, Puntos, Partidos Jugados, Goles a Favor, Goles en contra, Diferencia de gol.
-
-	Al elegir la opción 3, se deberá indicar el equipo ganador del torneo, el equipo con más partidos jugados a favor y terminar el programa.
-
-Utilizar la función buscar, que recibe un nombre y una lista de diccionarios. La función comparará el nombre con el campo “Nombre” de los diccionarios y devuelve la posición en la lista del nombre que coincide, o devuelve -1 si no lo encuentra. No es necesario desarrollar el código de la función.
-"""
-
 
 def buscar(nombre_equipo_buscado, equipos):
     for index, equipo in enumerate(equipos):
@@ -78,3 +62,7 @@ def torneo_de_futbol():
             print("Equipo ganador: " + equipos_ordenados[0]["nombre"])
             equipo_mas_partidos = equipo_con_mas_partidos(equipos)
             print("Equipo con mas partidos: " + equipo_mas_partidos["nombre"])
+            break
+
+
+torneo_de_futbol()
