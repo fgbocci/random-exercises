@@ -22,8 +22,8 @@ def padrones():
 
             alumnos[padron] = len(materias_aprobadas)
 
-    for alumno, materias in alumnos.items():
-        print("Alumno " + str(alumno) + " aprobo " + str(materias) + " materias")
+    for juan, materias in alumnos.items():
+        print("Alumno " + str(juan) + " aprobo " + str(materias) + " materias")
 
     print("Materias aprobadas por al menos 1 alumno: " + str(materias_aprobadas_por_todos))
 
