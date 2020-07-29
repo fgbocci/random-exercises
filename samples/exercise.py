@@ -7,6 +7,7 @@ def buscar(nombre_equipo_buscado, equipos):
 
 
 def ordenar_por_puntos_y_goles(equipos):
+    # https://www.geeksforgeeks.org/ways-sort-list-dictionaries-values-python-using-lambda-function/
     equipos_ordenados = sorted(equipos, key=lambda equipo: (equipo["puntos"], equipo["diferencia_de_gol"]), reverse=True)
     return equipos_ordenados
 
