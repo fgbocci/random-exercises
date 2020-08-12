@@ -3,6 +3,7 @@
 monto_variacion_comision = 10000
 comision_minima = 100
 vendedores_especiales = [8129, 3299, 4502]
+generos_validos = ["M", "F"]
 
 
 # Calculo de comision
@@ -23,6 +24,15 @@ def comision(codigo_vendedor, ventas_totales):
     return comision
 
 
+def genero_del_vendedor():
+    while True:
+        genero_vendedor = str(input("Ingrese el genero del vendedor: "))
+        if genero_vendedor in generos_validos:
+            break
+        print("El genero debe ser uno de " + str(generos_validos))
+    return genero_vendedor
+
+
 def reporte_de_comisiones():
 
     vendedor_que_mas_vendio = 0
@@ -40,7 +50,8 @@ def reporte_de_comisiones():
         if codigo_vendedor == 0:
             break
 
-        genero_vendedor = str(input("Ingrese el genero del vendedor: "))
+        genero_vendedor = genero_del_vendedor()
+
         total_vendido_vendedor = int(input("Ingrese el total vendido por el vendedor: "))
         comision_vendedor = comision(codigo_vendedor, total_vendido_vendedor)
         print("Comision de " + str(codigo_vendedor) + ": " + str(comision_vendedor))
